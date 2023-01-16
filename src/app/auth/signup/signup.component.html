@@ -2,7 +2,7 @@
 <!-- ngModel alternatif dinmasi mengambil data input   -->
 <mat-card>
   <mat-spinner *ngIf="isLoading"></mat-spinner>
-  <form (submit)="onSignup(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+  <form (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
     <mat-form-field>
       <input matInput name="email" type="email" placeholder="Email" #emailInput="ngModel" required ngModel email>
       <mat-error *ngIf="emailInput.invalid">Please enter a post email</mat-error>
